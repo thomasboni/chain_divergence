@@ -2,10 +2,13 @@
 
 """
 
-This script walks in a folder tree containing pengine blocks and parse it in
-order to return structured data about blocs, hash, nodes & timestamp.
+This script walks in a folder tree containing blockchain blocks and parse it in
+order to return structured data about divergent blocks containing blocks id,
+hash, nodes & timestamp of block file creation.
 
-## Input tree must contain one folder per node which contains all blocks:
+Input: root tree directory must contain one folder per node containing blocks.
+Block file must be named like `<block_id>.json`
+
 .
 ├── shk01
 │   ├── 0.json
@@ -20,8 +23,8 @@ order to return structured data about blocs, hash, nodes & timestamp.
 └── ....
 
 WARNING:
-    * You need to preserve originial timestamp in files attrributes if you want to get relevant timestamp in result.
-    * You need to have ONLY blocks folder in your tree.
+    * You need to preserve originial timestamp in files attributes if you want to get relevant timestamp in result.
+    * You need to have ONLY blocks folder in your tree
 
 Output example:
 
@@ -59,7 +62,7 @@ Output example:
       "69843d59b6ac5e9d830b9b91ab3aba06"
     ],
     [
-      "bex01",
+      "shk03",
       4891,
       1566835285.6030116,
       "2cf8cf6dea666b0a9eaf3e3d9a375859"
@@ -77,7 +80,7 @@ import os
 
 def parse_cli():
     """ parser """
-    parser = argparse.ArgumentParser(description='Parse pengine blocks tree')
+    parser = argparse.ArgumentParser(description='Return divergent block in blockchain')
     parser.add_argument('--path', '-p',
                         required=True,
                         help='root path of the directory tree')

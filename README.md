@@ -2,7 +2,9 @@
 
 ![platform](https://img.shields.io/badge/python-3.X-blue.svg)
 
-Analysis of blockchain masternode divergences: simple python script which parse files containing block in input and print blocks with divergences.
+Analysis of blockchain masternode divergences.
+
+Simple python script which parse files containing block in input and print blocks with divergences. It walks in a folder tree containing blockchain blocks and parse it in order to return structured data about divergent blocks containing blocks id, hash, nodes & timestamp of block file creation.
 
 * Input: folder hierarchy containing one directory per node with all blocks
 * Ouptut: json data of all blocks containing divergences

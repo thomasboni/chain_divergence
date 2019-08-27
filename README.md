@@ -15,10 +15,10 @@ Analysis of blockchain masternode divergences: simple python script which parse 
 
 ```
 git clone git@gitlab.pikcio.com:diaas/diaas_api.git
-python parse.py -p <blocks_folder> -d
+python parser.py -p <blocks_folder> -d
 ```
-    
-## Usage 
+
+## Usage
 
 ```
 usage: parser.py [-h] --path PATH [-v] [-d]

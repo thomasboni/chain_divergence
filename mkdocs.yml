@@ -1,0 +1,48 @@
+site_name: Grid-api
+site_description: 'Test'
+site_author: 'Thomas Boni <thomas@go2scale.com>'
+site_url: 'https://thomasboni.github.io/chain_divergence/'
+
+# Repository
+repo_name: 'thomasboni/chain_divergence'
+repo_url: 'https://github.com/thomasboni/chain_divergence/'
+
+# Configuration
+theme:
+  name: 'material'
+  # Color
+  palette:
+    primary: 'deep purple'
+    accent: 'deep purple'
+
+# Extensions (https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
+markdown_extensions:
+  - admonition # block-styled content (note, idea, warning, ...)
+  - codehilite # highlite code syntax
+  - footnotes # references in footnotes
+  - toc:
+      permalink: true # anchor on titles
+  # PyMdown extensions (https://squidfunk.github.io/mkdocs-material/extensions/pymdown)
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugins (https://squidfunk.github.io/mkdocs-material/plugins/minify-html/)
+plugins:
+  - search # search input
+  - git-revision-date-localized # revision date at the end of pages
+  - minify:
+      minify_html: true # minification of html

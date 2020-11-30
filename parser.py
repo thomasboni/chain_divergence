@@ -98,6 +98,7 @@ def parse_cli():
 
     return parser
 
+
 def main():
     """ main """
 
